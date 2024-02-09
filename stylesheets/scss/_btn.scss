@@ -1,0 +1,27 @@
+/* ------------------------------
+  btn.scss button
+------------------------------ */
+
+@mixin btn() {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 1rem 3rem;
+  border-radius: $br-normal;
+  background: $primary;
+  color: $white;
+  font-weight: $bold;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-primary {
+  @include btn;
+}
+
+

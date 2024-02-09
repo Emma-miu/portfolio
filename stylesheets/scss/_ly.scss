@@ -1,0 +1,44 @@
+/* ------------------------------
+  ly.scss PC
+------------------------------ */
+
+.ly-section {
+  padding: 2rem;
+  border-radius: $br-normal;
+  background: $primary-bg;
+}
+
+.ly-column-box {
+  display: flex;
+  gap: 50px;
+
+  &__item {
+    display: flex;
+    width: calc(100% - 50px);
+
+    p {
+      align-self: center;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+
+    img {
+      border-radius: $br-normal;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 652px) {
+  /* ------------------------------
+  ly.scss SP
+------------------------------ */
+  .ly-section {
+    padding: 1rem;
+  }
+}
+

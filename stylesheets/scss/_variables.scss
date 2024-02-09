@@ -1,0 +1,23 @@
+
+$primary: #bb86fc;
+$primary-dark: #3700b3;
+$primary-bg: rgba(187, 134, 252, 8%);
+$black: #121212;
+$white: #fff;
+
+$bold: 700;
+$normal: 500;
+
+$br-normal: 15px;
+
+$font-base: 16px;
+$font-big: 32px;
+$font-hero: 64px;
+
+
+@media (max-width: 652px) {
+  $br-normal: 7px;
+  $font-base: 14px;
+  $font-big: 24px;
+}
+
