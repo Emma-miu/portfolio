@@ -3,9 +3,8 @@
 ------------------------------ */
 
 body {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  width: 100%;
+  padding: 2rem 1rem 0;
   overflow-x: hidden;
   background: $black;
   color: $white;
@@ -25,7 +24,20 @@ img {
 
 a {
   color: $white;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: $white;
+  font-family: Nunito, sans-serif;
+  font-size: $font-base;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 h2 {
@@ -43,5 +55,11 @@ h2 {
     border-radius: $br-normal;
     background: $primary;
   }
+
+  + p {
+    margin-bottom: 2rem;
+  }
 }
+
+
 

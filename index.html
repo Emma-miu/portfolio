@@ -19,10 +19,9 @@
     <div class="header__inner">
       <nav class="header-nav" role="navigation">
         <ul class="header-nav-list">
-          <li class="header-nav-list__item"><a href="#about" class="header-nav-list__link">About</a></li>
-          <li class="header-nav-list__item"><a href="" class="header-nav-list__link">Projects</a></li>
-          <li class="header-nav-list__item"><a href="" class="header-nav-list__link">News</a></li>
-          <li class="header-nav-list__item"><a href="" class="header-nav-list__link">Contact</a></li>
+          <li class="header-nav-list__item"><a href="#projects" class="header-nav-list__link js-link">Projects</a></li>
+          <li class="header-nav-list__item"><a href="#about" class="header-nav-list__link js-link">About</a></li>
+          <li class="header-nav-list__item"><a href="#contact" class="header-nav-list__link js-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -30,7 +29,7 @@
         <div class="header-hero__inner">
           <span>Hi, nice to meet you</span>
           <h1>I'm Emma, a French web designer based in Tokyo.</h1>
-          <a href="#contact" class="btn-primary">SAY HI</a>
+          <a href="#contact" class="btn-primary js-link">SAY HI</a>
         </div>
       </div>
     </div>
@@ -39,12 +38,75 @@
 
   <!-- ##### Main start ##### -->
   <main class="ly-main" role="main">
+    <section id="projects" class="ly-section ly-section--tab">
+      <h2>Projects</h2>
+      <p>I'm currently working on some projects, i will update more info here soon.</p>
+
+      <div class="ly-tab">
+        <ul class="ly-tab__label">
+          <li class="js-tab-trigger ly-tab__label-item is-current">
+            <button class="ly-tab__button">Project 1</button>
+          </li>
+          <li class="js-tab-trigger ly-tab__label-item">
+            <button class="ly-tab__button">Project 2</button>
+          </li>
+          <li class="js-tab-trigger ly-tab__label-item">
+            <button class="ly-tab__button">Project 3</button>
+          </li>
+        </ul>
+
+        <div class="ly-tab__content">
+          <div class="js-tab-content ly-tab__content-item is-shown">
+            <div class="ly-column-box">
+              <div class="ly-column-box__item">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil soluta quasi minima libero earum voluptatibus, dolores, exercitationem rerum esse perspiciatis ullam obcaecati consequatur inventore aperiam ipsa molestiae dolor quae velit!</p>
+              </div>
+              <div class="ly-column-box__item">
+                <div class="ly-column-box__image">
+                  <img src="https://picsum.photos/100/100" alt="Hi I'm Emma, a web designer based in Tokyo.">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-tab-content ly-tab__content-item">
+            <div class="ly-column-box">
+              <div class="ly-column-box__item">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil soluta quasi minima libero earum voluptatibus, dolores, exercitationem rerum esse perspiciatis ullam obcaecati consequatur inventore aperiam ipsa molestiae dolor quae velit!</p>
+              </div>
+              <div class="ly-column-box__item">
+                <div class="ly-column-box__image">
+                  <img src="https://picsum.photos/400/350" alt="Hi I'm Emma, a web designer based in Tokyo.">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-tab-content ly-tab__content-item">
+            <div class="ly-column-box">
+              <div class="ly-column-box__item">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil soluta quasi minima libero earum voluptatibus, dolores, exercitationem rerum esse perspiciatis ullam obcaecati consequatur inventore aperiam ipsa molestiae dolor quae velit!</p>
+              </div>
+              <div class="ly-column-box__item">
+                <div class="ly-column-box__image">
+                  <img src="https://picsum.photos/230/350" alt="Hi I'm Emma, a web designer based in Tokyo.">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="ly-section">
       <h2>About me</h2>
 
       <div class="ly-column-box">
         <div class="ly-column-box__item">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil soluta quasi minima libero earum voluptatibus, dolores, exercitationem rerum esse perspiciatis ullam obcaecati consequatur inventore aperiam ipsa molestiae dolor quae velit!</p>
+          <p>My name is Emma, and I have been living in Tokyo for over 5 years now.</p>
+          <p>After studying Japanese and English, I transitioned to coding and web design.</p>
+          <p>I'm currently working for a Japanese company as a web designer.</p>
+          <p>I strongly believe that it is never too late to acquire new skills, and I strive to do so both in my personal and professional life.</p>
         </div>
         <div class="ly-column-box__item">
           <div class="ly-column-box__image">
@@ -53,7 +115,26 @@
         </div>
       </div>
     </section>
+
+    <section id="contact" class="ly-section">
+      <h2>Contact</h2>
+
+      <div class="ly-column-box">
+        <div class="ly-column-box__item">
+          <p>Have a project in mind ? Want to discuss potential opportunities ?  or have any questions ? I'd love to hear from you. Feel free to contact via email</p>
+          <p><a class="btn-primary" href="mailto:emma.fradin@gmail.com">emma.fradin@gmail.com</a></p>
+          <p>Or you can also message me <a href="http://www.linkedin.com/in/emmafradin" target="_blank" rel="noopener noreferrer">Linkedin</a> !</p>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- ##### Main end ##### -->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__sns"></div>
+      <p>Template design by Emma</p>
+    </div>
+  </footer>
 </body>
 </html>

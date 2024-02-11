@@ -1,8 +1,9 @@
 
 $primary: #bb86fc;
 $primary-dark: #3700b3;
-$primary-bg: rgba(187, 134, 252, 8%);
+$primary-bg: #bb86fc14;
 $black: #121212;
+$gray: #8B8B8B;
 $white: #fff;
 
 $bold: 700;
@@ -14,6 +15,7 @@ $font-base: 16px;
 $font-big: 32px;
 $font-hero: 64px;
 
+$trans: 0.3s;
 
 @media (max-width: 652px) {
   $br-normal: 7px;

@@ -2,10 +2,89 @@
   ly.scss PC
 ------------------------------ */
 
+.ly-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
 .ly-section {
   padding: 2rem;
   border-radius: $br-normal;
   background: $primary-bg;
+
+  &--tab {
+    padding: 0;
+    border-radius: 0;
+    background: none;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 4rem;
+  }
+}
+
+.ly-tab {
+
+  &__label {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  &__label-item {
+    overflow: hidden;
+    border-top: 2px solid $primary-bg;
+
+    &:first-of-type {
+      border-left: 2px solid $primary-bg;
+      border-top-left-radius: $br-normal;
+    }
+
+    &:last-of-type {
+      border-right: 2px solid $primary-bg;
+      border-top-right-radius: $br-normal;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    transition: $trans;
+    background: $primary-bg;
+    color: $gray;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+
+    .is-current & {
+      background: $black;
+      color: $white;
+
+      &:hover {
+        pointer-events: none;
+      }
+    }
+
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+    padding: 2rem;
+    border: 2px solid $primary-bg;
+    border-radius: 0 $br-normal $br-normal;
+  }
+
+  &__content-item {
+    display: none;
+
+    &.is-shown {
+      display: block;
+    }
+  }
 }
 
 .ly-column-box {
@@ -14,10 +93,14 @@
 
   &__item {
     display: flex;
+    flex-direction: column;
+    align-self: center;
     width: calc(100% - 50px);
 
     p {
-      align-self: center;
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -37,8 +120,59 @@
   /* ------------------------------
   ly.scss SP
 ------------------------------ */
+
+  .ly-main {
+    max-width: none;
+  }
+  
   .ly-section {
-    padding: 1rem;
+    padding: 2rem 1rem;
+
+    &--tab {
+      padding: 0;
+    }
+  }
+
+  .ly-tab {
+    &__label {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-top: 2px solid $primary-bg;
+      border-right: 2px solid $primary-bg;
+      border-left: 2px solid $primary-bg;
+      border-radius: $br-normal $br-normal 0 0;
+    }
+
+    &__label-item {
+      border-top: 0;
+
+      &:first-of-type {
+        border-left: 0;
+        border-top-left-radius: 0;
+      }
+
+      &:last-of-type {
+        border-right: 0;
+        border-top-right-radius: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $black;
+      }
+    }
+
+    &__content {
+      align-items: normal;
+      min-height: unset;
+      padding: 2rem 1rem;
+      border-radius: 0 0 $br-normal $br-normal;
+    }
+  }
+
+  .ly-column-box {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 

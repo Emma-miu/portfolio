@@ -108,9 +108,8 @@ li {
   common.scss
 ------------------------------ */
 body {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  width: 100%;
+  padding: 2rem 1rem 0;
   overflow-x: hidden;
   background: #121212;
   color: #fff;
@@ -130,7 +129,19 @@ img {
 
 a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+}
+button:hover {
+  cursor: pointer;
 }
 
 h2 {
@@ -148,10 +159,17 @@ h2::before {
   border-radius: 15px;
   background: #bb86fc;
 }
+h2 + p {
+  margin-bottom: 2rem;
+}
 
 /* ------------------------------
   header.scss PC
 ------------------------------ */
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .header__inner {
   width: 100%;
 }
@@ -168,14 +186,15 @@ h2::before {
   gap: 80px;
   padding: 30px 60px;
   border-radius: 15px;
-  background: rgba(187, 134, 252, 0.08);
+  background: #bb86fc14;
 }
 .header-nav-list__link {
   padding-bottom: 5px;
   transition: background-size 350ms;
-  --bg-h: 4px;
   background: linear-gradient(0deg, #bb86fc, #bb86fc) no-repeat right bottom/0 var(--bg-h);
   font-weight: 700;
+  text-decoration: none;
+  --bg-h: 4px;
 }
 .header-nav-list__link:where(:hover, :focus-visible) {
   background-size: 100% var(--bg-h);
@@ -187,7 +206,7 @@ h2::before {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 5rem;
 }
 .header-hero__inner span {
   display: block;
@@ -204,6 +223,10 @@ h2::before {
   /* ------------------------------
   header.scss SP
 ------------------------------ */
+  .header {
+    max-width: none;
+  }
+
   .header-nav {
     justify-content: center;
   }
@@ -220,6 +243,7 @@ h2::before {
   }
   .header-hero__inner span {
     font-size: 32px;
+    text-align: center;
   }
   .header-hero__inner h1 {
     font-size: 24px;
@@ -229,12 +253,9 @@ h2::before {
   btn.scss button
 ------------------------------ */
 .btn-primary {
-  display: flex;
+  display: inline-block;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 15px;
   background: #bb86fc;
   color: #fff;
@@ -248,10 +269,73 @@ h2::before {
 /* ------------------------------
   ly.scss PC
 ------------------------------ */
+.ly-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
 .ly-section {
   padding: 2rem;
   border-radius: 15px;
-  background: rgba(187, 134, 252, 0.08);
+  background: #bb86fc14;
+}
+.ly-section--tab {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+.ly-section:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
+.ly-tab__label {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.ly-tab__label-item {
+  overflow: hidden;
+  border-top: 2px solid #bb86fc14;
+}
+.ly-tab__label-item:first-of-type {
+  border-left: 2px solid #bb86fc14;
+  border-top-left-radius: 15px;
+}
+.ly-tab__label-item:last-of-type {
+  border-right: 2px solid #bb86fc14;
+  border-top-right-radius: 15px;
+}
+.ly-tab__button {
+  width: 100%;
+  padding: 1rem 2rem;
+  transition: 0.3s;
+  background: #bb86fc14;
+  color: #8B8B8B;
+}
+.ly-tab__button:hover {
+  background: #bb86fc;
+  color: #fff;
+}
+.is-current .ly-tab__button {
+  background: #121212;
+  color: #fff;
+}
+.is-current .ly-tab__button:hover {
+  pointer-events: none;
+}
+.ly-tab__content {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  padding: 2rem;
+  border: 2px solid #bb86fc14;
+  border-radius: 0 15px 15px;
+}
+.ly-tab__content-item {
+  display: none;
+}
+.ly-tab__content-item.is-shown {
+  display: block;
 }
 
 .ly-column-box {
@@ -260,10 +344,12 @@ h2::before {
 }
 .ly-column-box__item {
   display: flex;
+  flex-direction: column;
+  align-self: center;
   width: calc(100% - 50px);
 }
-.ly-column-box__item p {
-  align-self: center;
+.ly-column-box__item p:not(:last-of-type) {
+  margin-bottom: 1rem;
 }
 .ly-column-box__image {
   margin: 0 auto;
@@ -276,9 +362,69 @@ h2::before {
   /* ------------------------------
   ly.scss SP
 ------------------------------ */
-  .ly-section {
-    padding: 1rem;
+  .ly-main {
+    max-width: none;
   }
+
+  .ly-section {
+    padding: 2rem 1rem;
+  }
+  .ly-section--tab {
+    padding: 0;
+  }
+
+  .ly-tab__label {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-top: 2px solid #bb86fc14;
+    border-right: 2px solid #bb86fc14;
+    border-left: 2px solid #bb86fc14;
+    border-radius: 15px 15px 0 0;
+  }
+  .ly-tab__label-item {
+    border-top: 0;
+  }
+  .ly-tab__label-item:first-of-type {
+    border-left: 0;
+    border-top-left-radius: 0;
+  }
+  .ly-tab__label-item:last-of-type {
+    border-right: 0;
+    border-top-right-radius: 0;
+  }
+  .ly-tab__label-item:not(:last-child) {
+    border-bottom: 1px solid #121212;
+  }
+  .ly-tab__content {
+    align-items: normal;
+    min-height: unset;
+    padding: 2rem 1rem;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .ly-column-box {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+/* ------------------------------
+  footer.scss PC
+------------------------------ */
+.footer {
+  margin: 0 -1rem;
+  border-radius: 50px 50px 0 0;
+  background: #bb86fc14;
+}
+.footer__inner {
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 652px) {
+  /* ------------------------------
+  footer.scss SP
+------------------------------ */
 }
 
 /*# sourceMappingURL=style.css.map */

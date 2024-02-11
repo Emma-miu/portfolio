@@ -3,12 +3,9 @@
 ------------------------------ */
 
 @mixin btn() {
-  display: flex;
+  display: inline-block;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   border-radius: $br-normal;
   background: $primary;
   color: $white;

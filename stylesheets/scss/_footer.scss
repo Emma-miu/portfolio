@@ -1,0 +1,24 @@
+/* ------------------------------
+  footer.scss PC
+------------------------------ */
+
+
+.footer {
+  margin: 0 -1rem;
+  border-radius: 50px 50px 0 0;
+  background: $primary-bg;
+
+  &__inner {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 652px) {
+  /* ------------------------------
+  footer.scss SP
+------------------------------ */
+  .footer {
+    // border-radius: $br-normal $br-normal 0 0;
+  }
+}
