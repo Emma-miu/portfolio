@@ -5,7 +5,6 @@
 
 .footer {
   margin: 0 -1rem;
-  border-radius: 50px 50px 0 0;
   background: $primary-bg;
 
   &__inner {
@@ -18,7 +17,6 @@
   /* ------------------------------
   footer.scss SP
 ------------------------------ */
-  .footer {
-    // border-radius: $br-normal $br-normal 0 0;
-  }
+ 
 }
+

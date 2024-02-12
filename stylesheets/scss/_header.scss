@@ -3,7 +3,9 @@
 ------------------------------ */
 
 .header {
+  position: relative;
   max-width: 1100px;
+  height: 100vh;
   margin: 0 auto;
   &__inner {
     width: 100%;
@@ -43,10 +45,17 @@
 .header-hero {
   &__inner {
     display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-right: auto;
+    margin-left: auto;
     padding: 4rem 2rem 5rem;
+    transform: translateY(-50%);
 
     span {
       display: block;

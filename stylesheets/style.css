@@ -108,7 +108,6 @@ li {
   common.scss
 ------------------------------ */
 body {
-  width: 100%;
   padding: 2rem 1rem 0;
   overflow-x: hidden;
   background: #121212;
@@ -163,11 +162,21 @@ h2 + p {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 652px) {
+  h2 {
+    font-size: 24px;
+  }
+  h2::before {
+    height: 40px;
+  }
+}
 /* ------------------------------
   header.scss PC
 ------------------------------ */
 .header {
+  position: relative;
   max-width: 1100px;
+  height: 100vh;
   margin: 0 auto;
 }
 .header__inner {
@@ -203,10 +212,17 @@ h2 + p {
 
 .header-hero__inner {
   display: flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin-right: auto;
+  margin-left: auto;
   padding: 4rem 2rem 5rem;
+  transform: translateY(-50%);
 }
 .header-hero__inner span {
   display: block;
@@ -281,7 +297,7 @@ h2 + p {
   background: #bb86fc14;
 }
 .ly-section--tab {
-  padding: 0;
+  padding: 2rem 0 0;
   border-radius: 0;
   background: none;
 }
@@ -310,7 +326,7 @@ h2 + p {
   padding: 1rem 2rem;
   transition: 0.3s;
   background: #bb86fc14;
-  color: #8B8B8B;
+  color: #8b8b8b;
 }
 .ly-tab__button:hover {
   background: #bb86fc;
@@ -367,10 +383,13 @@ h2 + p {
   }
 
   .ly-section {
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
   .ly-section--tab {
-    padding: 0;
+    padding: 1rem 0 0;
+  }
+  .ly-section:not(:last-of-type) {
+    margin-bottom: 3rem;
   }
 
   .ly-tab__label {
@@ -413,7 +432,6 @@ h2 + p {
 ------------------------------ */
 .footer {
   margin: 0 -1rem;
-  border-radius: 50px 50px 0 0;
   background: #bb86fc14;
 }
 .footer__inner {

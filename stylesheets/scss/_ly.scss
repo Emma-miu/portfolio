@@ -14,7 +14,7 @@
   background: $primary-bg;
 
   &--tab {
-    padding: 0;
+    padding: 2rem 0 0;
     border-radius: 0;
     background: none;
   }
@@ -124,12 +124,16 @@
   .ly-main {
     max-width: none;
   }
-  
+
   .ly-section {
-    padding: 2rem 1rem;
+    padding: 1rem;
 
     &--tab {
-      padding: 0;
+      padding: 1rem 0 0;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
     }
   }
 
