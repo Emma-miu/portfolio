@@ -70,6 +70,7 @@ h2 {
 
     &::before {
       height: 40px;
+      border-radius: $br-normal-sp;
     }
   }
 }

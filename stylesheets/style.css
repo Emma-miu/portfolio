@@ -168,6 +168,7 @@ h2 + p {
   }
   h2::before {
     height: 40px;
+    border-radius: 7px;
   }
 }
 /* ------------------------------
@@ -252,6 +253,7 @@ h2 + p {
     gap: 10px 20px;
     width: 100%;
     padding: 20px 10px;
+    border-radius: 7px;
   }
 
   .header-hero__inner {
@@ -274,7 +276,7 @@ h2 + p {
   padding: 1rem 2rem;
   border-radius: 15px;
   background: #bb86fc;
-  color: #fff;
+  color: #121212;
   font-weight: 700;
   text-decoration: none;
 }
@@ -399,7 +401,7 @@ h2 + p {
     border-top: 2px solid #bb86fc14;
     border-right: 2px solid #bb86fc14;
     border-left: 2px solid #bb86fc14;
-    border-radius: 15px 15px 0 0;
+    border-radius: 7px 7px 0 0;
   }
   .ly-tab__label-item {
     border-top: 0;
@@ -419,7 +421,7 @@ h2 + p {
     align-items: normal;
     min-height: unset;
     padding: 2rem 1rem;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 7px 7px;
   }
 
   .ly-column-box {

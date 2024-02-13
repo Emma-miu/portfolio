@@ -91,6 +91,7 @@
     gap: 10px 20px;
     width: 100%;
     padding: 20px 10px;
+    border-radius: $br-normal-sp;
   }
 
   .header-hero {
@@ -98,7 +99,7 @@
       padding-top: 3rem;
 
       span {
-        font-size: $font-big;
+        font-size: $font-hero-sp;
         text-align: center;
       }
 
