@@ -34,6 +34,7 @@
   &__label-item {
     overflow: hidden;
     border-top: 2px solid $primary-bg;
+    border-bottom: 2px solid $black;
 
     &:first-of-type {
       border-left: 2px solid $primary-bg;
@@ -44,23 +45,28 @@
       border-right: 2px solid $primary-bg;
       border-top-right-radius: $br-normal;
     }
+
+    &:nth-child(even) {
+      border-right: 2px solid $primary-bg;
+      border-left: 2px solid $primary-bg;
+    }
   }
 
   &__button {
     width: 100%;
     padding: 1rem 2rem;
     transition: $trans;
-    background: $primary-bg;
-    color: $gray;
+    background: $black; //$primary-bg;
+    color: $white; //$gray;
 
     &:hover {
       background: $primary;
-      color: $white;
+      color: $black;
     }
 
     .is-current & {
-      background: $black;
-      color: $white;
+      background: $primary;
+      color: $black;
 
       &:hover {
         pointer-events: none;
@@ -74,8 +80,9 @@
     align-items: center;
     min-height: 400px;
     padding: 2rem;
-    border: 2px solid $primary-bg;
+    // border: 2px solid $primary-bg;
     border-radius: 0 $br-normal $br-normal;
+    background: $primary-bg;
   }
 
   &__content-item {
@@ -94,7 +101,6 @@
   &__item {
     display: flex;
     flex-direction: column;
-    align-self: center;
     width: calc(100% - 50px);
 
     p {
@@ -164,6 +170,11 @@
       &:not(:last-child) {
         border-bottom: 1px solid $black;
       }
+
+      &:nth-child(even) {
+        border-right: 0;
+        border-left: 0;
+      }
     }
 
     &__content {
@@ -177,6 +188,13 @@
   .ly-column-box {
     flex-direction: column;
     gap: 30px;
+
+    &__item {
+      width: 100%;
+      &:has(.ly-column-box__image) {
+        align-self: center;
+      }
+    }
   }
 }
 
