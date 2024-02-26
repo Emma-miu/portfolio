@@ -64,6 +64,10 @@ p {
   }
 }
 
+li {
+  list-style-position: inside;
+}
+
 @media (max-width: 652px) {
   body {
     // font-size: $font-base-sp;

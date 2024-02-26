@@ -93,10 +93,6 @@ hr {
   padding: 0;
 }
 
-input, select {
-  /*	vertical-align:middle;*/
-}
-
 li {
   list-style: none;
 }
@@ -164,6 +160,10 @@ p {
 }
 p:last-of-type {
   margin-bottom: 2rem;
+}
+
+li {
+  list-style-position: inside;
 }
 
 @media (max-width: 652px) {
@@ -370,6 +370,10 @@ p:last-of-type {
   padding: 2rem;
   border-radius: 0 15px 15px;
   background: rgba(187, 134, 252, 0.0784313725);
+}
+.ly-tab__content li {
+  list-style: disc;
+  list-style-position: inside;
 }
 .ly-tab__content-item {
   display: none;

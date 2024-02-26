@@ -80,9 +80,13 @@
     align-items: center;
     min-height: 400px;
     padding: 2rem;
-    // border: 2px solid $primary-bg;
     border-radius: 0 $br-normal $br-normal;
     background: $primary-bg;
+
+    li {
+      list-style: disc;
+      list-style-position: inside;
+     }
   }
 
   &__content-item {
