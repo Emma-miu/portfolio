@@ -158,7 +158,11 @@ h2::before {
   border-radius: 15px;
   background: #bb86fc;
 }
-h2 + p {
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-of-type {
   margin-bottom: 2rem;
 }
 
