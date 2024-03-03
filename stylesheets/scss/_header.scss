@@ -99,6 +99,8 @@
 
   .header-hero {
     &__inner {
+      bottom: 42%;
+      gap: 1.5rem;
 
       span {
         font-size: $font-hero-sp;
@@ -107,6 +109,10 @@
 
       h1 {
         font-size: 24px;
+      }
+
+      p {
+        margin-bottom: 0;
       }
     }
   }
