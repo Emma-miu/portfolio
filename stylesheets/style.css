@@ -159,7 +159,7 @@ p {
   margin-bottom: 1rem;
 }
 p:last-of-type {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 li {
@@ -331,6 +331,9 @@ li {
   margin-bottom: 4rem;
 }
 
+.ly-tab {
+  margin-top: 1rem;
+}
 .ly-tab__label {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -401,11 +404,17 @@ li {
 .ly-column-box__item p:not(:last-of-type) {
   margin-bottom: 1rem;
 }
+.ly-column-box__item:has(.ly-column-box__image--avatar) {
+  justify-content: center;
+}
 .ly-column-box__image {
   margin: 0 auto;
 }
 .ly-column-box__image img {
   border-radius: 15px;
+}
+.ly-column-box__image--avatar {
+  width: 50%;
 }
 
 @media (max-width: 652px) {

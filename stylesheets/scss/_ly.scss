@@ -25,6 +25,7 @@
 }
 
 .ly-tab {
+  margin-top: 1rem;
 
   &__label {
     display: grid;
@@ -112,6 +113,10 @@
         margin-bottom: 1rem;
       }
     }
+
+    &:has(.ly-column-box__image--avatar) {
+      justify-content: center;
+    }
   }
 
   &__image {
@@ -119,6 +124,10 @@
 
     img {
       border-radius: $br-normal;
+    }
+
+    &--avatar {
+      width: 50%;
     }
   }
 }
