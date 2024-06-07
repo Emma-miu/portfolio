@@ -9,9 +9,13 @@
 }
 
 .ly-section {
+  visibility: hidden;
   padding: 2rem;
-  border-radius: $br-normal;
+  transform: translateY(20vh);
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  opacity: 0;
   background: $primary-bg;
+  will-change: opacity, visibility;
 
   &--tab {
     padding: 2rem 0 0;
@@ -22,6 +26,12 @@
   &:not(:last-of-type) {
     margin-bottom: 4rem;
   }
+}
+
+.inView {
+  visibility: visible;
+  transform: none;
+  opacity: 1;
 }
 
 .ly-tab {
@@ -98,6 +108,8 @@
     }
   }
 }
+
+
 
 .ly-column-box {
   display: flex;

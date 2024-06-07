@@ -318,9 +318,13 @@ li {
 }
 
 .ly-section {
+  visibility: hidden;
   padding: 2rem;
-  border-radius: 15px;
+  transform: translateY(20vh);
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  opacity: 0;
   background: rgba(187, 134, 252, 0.0784313725);
+  will-change: opacity, visibility;
 }
 .ly-section--tab {
   padding: 2rem 0 0;
@@ -329,6 +333,12 @@ li {
 }
 .ly-section:not(:last-of-type) {
   margin-bottom: 4rem;
+}
+
+.inView {
+  visibility: visible;
+  transform: none;
+  opacity: 1;
 }
 
 .ly-tab {
