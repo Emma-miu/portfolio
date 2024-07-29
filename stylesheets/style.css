@@ -44,7 +44,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -104,7 +104,8 @@ li {
   common.scss
 ------------------------------ */
 body {
-  padding: 2rem 1rem 0;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
   background: #121212;
   color: #fff;
@@ -114,6 +115,10 @@ body {
   line-height: 1.5;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 img {
@@ -166,6 +171,38 @@ li {
   list-style-position: inside;
 }
 
+.kv {
+  position: relative;
+  height: calc(100vh - 104px);
+}
+.kv__inner {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 45%;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 2rem;
+  transform: translateY(50%);
+}
+.kv__inner span {
+  display: block;
+  font-size: 64px;
+  font-weight: 700;
+}
+.kv__inner h1 {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+}
+.kv__inner p {
+  text-align: center;
+}
+
 @media (max-width: 652px) {
   h2 {
     font-size: 24px;
@@ -174,13 +211,30 @@ li {
     height: 40px;
     border-radius: 7px;
   }
+
+  .kv {
+    height: calc(100vh - 84px);
+  }
+  .kv__inner {
+    bottom: 50%;
+    gap: 1.5rem;
+  }
+  .kv__inner span {
+    font-size: 32px;
+    text-align: center;
+  }
+  .kv__inner h1 {
+    font-size: 24px;
+  }
+  .kv__inner p {
+    margin-bottom: 0;
+  }
 }
 /* ------------------------------
   header.scss PC
 ------------------------------ */
 .header {
   max-width: 1100px;
-  height: 100vh;
   margin: 0 auto;
 }
 .header__inner {
@@ -190,6 +244,7 @@ li {
 .header-nav {
   display: flex;
   justify-content: flex-end;
+  padding: 10px;
 }
 
 .header-nav-list {
@@ -199,7 +254,7 @@ li {
   gap: 80px;
   padding: 30px 60px;
   border-radius: 15px;
-  background: rgba(187, 134, 252, 0.0784313725);
+  background: #bb86fc14;
 }
 .header-nav-list__link {
   padding-bottom: 5px;
@@ -244,14 +299,16 @@ li {
 
 @media (max-width: 652px) {
   /* ------------------------------
-    header.scss SP
-  ------------------------------ */
+  header.scss SP
+------------------------------ */
   .header {
     max-width: none;
   }
+
   .header-nav {
     justify-content: center;
   }
+
   .header-nav-list {
     justify-content: space-around;
     gap: 10px 20px;
@@ -259,6 +316,7 @@ li {
     padding: 20px 10px;
     border-radius: 7px;
   }
+
   .header-hero__inner {
     bottom: 42%;
     gap: 1.5rem;
@@ -318,21 +376,16 @@ li {
 }
 
 .ly-section {
-  visibility: hidden;
+  margin-bottom: 4rem;
   padding: 2rem;
-  transform: translateY(20vh);
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  opacity: 0;
-  background: rgba(187, 134, 252, 0.0784313725);
-  will-change: opacity, visibility;
+  background: #bb86fc14;
+  border-radius: 7px;
 }
 .ly-section--tab {
   padding: 2rem 0 0;
   border-radius: 0;
   background: none;
-}
-.ly-section:not(:last-of-type) {
-  margin-bottom: 4rem;
 }
 
 .inView {
@@ -350,20 +403,20 @@ li {
 }
 .ly-tab__label-item {
   overflow: hidden;
-  border-top: 2px solid rgba(187, 134, 252, 0.0784313725);
+  border-top: 2px solid #bb86fc14;
   border-bottom: 2px solid #121212;
 }
 .ly-tab__label-item:first-of-type {
-  border-left: 2px solid rgba(187, 134, 252, 0.0784313725);
+  border-left: 2px solid #bb86fc14;
   border-top-left-radius: 15px;
 }
 .ly-tab__label-item:last-of-type {
-  border-right: 2px solid rgba(187, 134, 252, 0.0784313725);
+  border-right: 2px solid #bb86fc14;
   border-top-right-radius: 15px;
 }
 .ly-tab__label-item:nth-child(even) {
-  border-right: 2px solid rgba(187, 134, 252, 0.0784313725);
-  border-left: 2px solid rgba(187, 134, 252, 0.0784313725);
+  border-right: 2px solid #bb86fc14;
+  border-left: 2px solid #bb86fc14;
 }
 .ly-tab__button {
   width: 100%;
@@ -389,7 +442,7 @@ li {
   min-height: 400px;
   padding: 2rem;
   border-radius: 0 15px 15px;
-  background: rgba(187, 134, 252, 0.0784313725);
+  background: #bb86fc14;
 }
 .ly-tab__content li {
   list-style: disc;
@@ -429,13 +482,15 @@ li {
 
 @media (max-width: 652px) {
   /* ------------------------------
-    ly.scss SP
-  ------------------------------ */
+  ly.scss SP
+------------------------------ */
   .ly-main {
     max-width: none;
+    padding: 0 10px;
   }
+
   .ly-section {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   .ly-section--tab {
     padding: 1rem 0 0;
@@ -443,13 +498,14 @@ li {
   .ly-section:not(:last-of-type) {
     margin-bottom: 3rem;
   }
+
   .ly-tab__label {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border-top: 2px solid rgba(187, 134, 252, 0.0784313725);
-    border-right: 2px solid rgba(187, 134, 252, 0.0784313725);
-    border-left: 2px solid rgba(187, 134, 252, 0.0784313725);
+    border-top: 2px solid #bb86fc14;
+    border-right: 2px solid #bb86fc14;
+    border-left: 2px solid #bb86fc14;
     border-radius: 7px 7px 0 0;
   }
   .ly-tab__label-item {
@@ -476,6 +532,7 @@ li {
     padding: 2rem 1rem;
     border-radius: 0 0 7px 7px;
   }
+
   .ly-column-box {
     flex-direction: column;
     gap: 30px;
@@ -491,8 +548,9 @@ li {
   footer.scss PC
 ------------------------------ */
 .footer {
-  margin: 0 -1rem;
-  background: rgba(187, 134, 252, 0.0784313725);
+  position: sticky;
+  top: 100vh;
+  background: #bb86fc14;
 }
 .footer__inner {
   padding: 2rem;
@@ -501,6 +559,8 @@ li {
 
 @media (max-width: 652px) {
   /* ------------------------------
-    footer.scss SP
-  ------------------------------ */
-}/*# sourceMappingURL=style.css.map */
+  footer.scss SP
+------------------------------ */
+}
+
+/*# sourceMappingURL=style.css.map */

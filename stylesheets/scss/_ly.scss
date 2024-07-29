@@ -9,22 +9,16 @@
 }
 
 .ly-section {
-  visibility: hidden;
+  margin-bottom: 4rem;
   padding: 2rem;
-  transform: translateY(20vh);
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  opacity: 0;
   background: $primary-bg;
-  will-change: opacity, visibility;
+  border-radius: 7px;
 
   &--tab {
     padding: 2rem 0 0;
     border-radius: 0;
     background: none;
-  }
-
-  &:not(:last-of-type) {
-    margin-bottom: 4rem;
   }
 }
 
@@ -154,10 +148,11 @@
 
   .ly-main {
     max-width: none;
+    padding: 0 10px;
   }
 
   .ly-section {
-    padding: 1rem;
+    padding: 2rem 1rem;
 
     &--tab {
       padding: 1rem 0 0;

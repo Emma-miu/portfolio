@@ -4,7 +4,8 @@
 
 
 .footer {
-  margin: 0 -1rem;
+  position: sticky;
+  top: 100vh;
   background: $primary-bg;
 
   &__inner {
